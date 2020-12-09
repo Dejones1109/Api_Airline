@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.its.airport.api.exceptions.handlers;
+
+
+import com.its.airport.api.dto.GwResponseDto;
+import com.its.airport.api.exceptions.AuthenException;
+import com.its.airport.api.exceptions.ProcessErrorException;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+//import com.its.sanve.api.exceptions.GWException;
+
+/**
+ *
+ * @author quangdt
+ */
+
+@RestControllerAdvice
+public class BussinessExceptionHandler extends com.its.airport.api.exceptions.handlers.CommonExceptionHandler {
+
+
+    @ExceptionHandler(AuthenException.class)
+    public ResponseEntity handleException(AuthenException ex) {
+        logger.info(ex.getMessage());
+        return GwResponseDto.build().withHttpStatus(ex.getHttpStatus())
+                .withCode(ex.getCode()).withMessage(ex.getMessage()).toResponseEntity();
+    }
+
+    @ExceptionHandler(ProcessErrorException.class)
+    public ResponseEntity handleException(ProcessErrorException ex) {
+        logger.info(ex.getMessage());
+        return GwResponseDto.build().withHttpStatus(ex.getHttpStatus())
+                .withCode(ex.getCode()).withMessage(ex.getMessage()).toResponseEntity();
+    }
+
+}
