@@ -38,23 +38,18 @@ public class AirportCommunication extends AbstractCommunication {
         return retrofit.create(AirportCommunicate.class);
     }
     @Async
-    public  FlightFare[] searchAirport(AirportRequest airportRequest){
+    public  DepartureFlights[] searchAirport(AirportRequest airportRequest){
         try {
-            FlightFare[] flightFares=null;
+        //    DepartureFlights[] flightFares=null;
             Call<AirportResponse<DepartureFlights[]>> request = airportCommunicate.searchFlight(airportRequest);
             log.info("request:{}",request);
             Response<AirportResponse<DepartureFlights[]>> response = request.execute();
             if(response.isSuccessful()){
                 log.info("response successful");
                 AirportResponse<DepartureFlights[]> data = response.body();
-                DepartureFlights[] departureFlights = data.getData();
-                log.info("departureFlights:{}",departureFlights);
-                for(DepartureFlights depart : departureFlights){
-                    Flight flight = depart.getFlight();
-                    flightFares = flight.getFlightFares();
-                }
+
                 log.info("data:{}",data);
-                return flightFares;
+                return data.getData();
             }else {
                 log.warn("response error!");
                 return null;

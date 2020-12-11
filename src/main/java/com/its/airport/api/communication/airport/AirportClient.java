@@ -1,6 +1,7 @@
 package com.its.airport.api.communication.airport;
 
 import com.its.airport.api.communication.dto.AirportRequest;
+import com.its.airport.api.communication.dto.DepartureFlights;
 import com.its.airport.api.communication.dto.FlightFare;
 import com.its.airport.api.repositories.AirportRepository;
 import com.its.airport.api.repositories.RouteRepository;
@@ -63,7 +64,7 @@ public class AirportClient {
 //                DepartureFlights[] departureFlightsList = airportCommunication.searchAirport(request);
 //
 //                for (DepartureFlights departureFlights : departureFlightsList) {
-//                    Flight flight = departureFlights.getFlight();
+//                    Flight flight = departureFlights.g();
 //                    log.info("flight:{}", flight);
 //                    FlightFare[] flightFares = flight.getFlightFares();
 //                    log.info("flightFares:{}", flightFares.length);
@@ -85,37 +86,57 @@ public class AirportClient {
 //            return "error";
 //        }
 //    }
-    public FlightFare getTotalPriceCheap(String departureAirportCode, String destinationAirportCode, String departureDate, String returnDate, int adult, int children, int infant) {
-        List<FlightFare[]> list = new ArrayList<>();
-        FlightFare flightFareMin = new FlightFare();
-        flightFareMin.setTotalPrice(0.0);
-        // flightFareMax.setAirlineCode("VN");
+    public Map<String, FlightFare> getTotalPriceCheap(int itineraryType,String departureAirportCode, String destinationAirportCode, String departureDate, String returnDate, int adult, int children, int infant) {
+        Map<String, FlightFare> mapTotalPrice = new HashMap<>();
+        List<FlightFare[]> listDepartureFlights = new ArrayList<>();
+        List<FlightFare[]> listReturnFlights = new ArrayList<>();
+
         AirportRequest request = new AirportRequest();
-        request.setItineraryType(1);
+
+            request.setItineraryType(itineraryType);
+
+
         request.setDepartureAirportCode(departureAirportCode);
         request.setDestinationAirportCode(destinationAirportCode);
         request.setDepartureDate(departureDate);
         request.setReturnDate(returnDate);
         request.setAdult(adult);
-        request.setAdult(children);
+        request.setChildren(children);
         request.setInfant(infant);
-        String[] code = {"VN","VJ","BL","QH"};
+        String[] code = {"VN", "VJ", "QH"};
         for (String key : code) {
             request.setAirlineCode(key);
             Long timestartRequest = System.currentTimeMillis();
             log.info("key:{}", key);
-            FlightFare[] flightFares = airportCommunication.searchAirport(request);
-            Long timeReponse = System.currentTimeMillis();
-            log.info("api request-response:{}", timeReponse - timestartRequest);
-            if (flightFares.length == 0) {
-                continue;
-            } else {
-                list.add(flightFares);
+            DepartureFlights[] departureFlights = airportCommunication.searchAirport(request);
+            log.info("departureFlight:{}",departureFlights);
+            Long timeResponse = System.currentTimeMillis();
+            for (DepartureFlights departureFlight : departureFlights) {
+              if (departureFlight.getDepartureFlights().getFlightFares().length != 0 || departureFlight.getReturnFlights().getFlightFares().length != 0) {
+                    listDepartureFlights.add(departureFlight.getDepartureFlights().getFlightFares());
+                    listReturnFlights.add(departureFlight.getReturnFlights().getFlightFares());
+                }
             }
-        }
-        log.info("listTotalPrice:{}",list);
+            log.info("api request-response:{}", timeResponse - timestartRequest);
 
-        Long start = System.currentTimeMillis();
+        }
+       log.info("listDepartureFlight:{}",listDepartureFlights);
+       log.info("listReturnFlight:{}",listReturnFlights);
+        FlightFare departureFlight = getTotalPriceMix(listDepartureFlights);
+        mapTotalPrice.put("departureFlight", departureFlight);
+        FlightFare returnFlight = getTotalPriceMix(listReturnFlights);
+        if(returnFlight.getTotalPrice()!=0.0){
+            mapTotalPrice.put("returnFlight", returnFlight);
+        }
+
+
+        return mapTotalPrice;
+
+    }
+
+    private FlightFare getTotalPriceMix(List<FlightFare[]> list) {
+        FlightFare flightFareMin = new FlightFare();
+        flightFareMin.setTotalPrice(0.0);
         for (FlightFare[] listFlight : list) {
 
             for (FlightFare flightFare : listFlight) {
@@ -132,8 +153,8 @@ public class AirportClient {
 
             }
         }
-        Long end = System.currentTimeMillis();
-        log.info("time process:{}",end-start);
+
+
         return flightFareMin;
     }
 }

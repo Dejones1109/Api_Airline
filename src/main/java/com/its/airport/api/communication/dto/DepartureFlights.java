@@ -13,6 +13,8 @@ import lombok.*;
 public class DepartureFlights {
 
     @JsonProperty("departureFlights")
-    Flight flight;
+    Flight departureFlights;
+    @JsonProperty("returnFlights")
+    Flight returnFlights;
 }
 
