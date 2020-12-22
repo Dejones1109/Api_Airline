@@ -20,7 +20,7 @@ import org.springframework.stereotype.Repository;
 public interface AirportRepository extends JpaRepository<Airport, Long> {
     @Query("SELECT r.id FROM Airport r WHERE lower(r.airportName)  = :airportName")
     Integer searchAirportID(@Param("airportName") String airportName);
-    @Query("SELECT r.airportCode FROM Airport r WHERE r.id =:id")
-    String searchAirportCode(@Param("id") int id);
+    @Query("SELECT r.provinceName FROM Airport r WHERE r.codeProvince=:codeProvince")
+    String provinceName(@Param("codeProvince") String codeProvince);
 
 }

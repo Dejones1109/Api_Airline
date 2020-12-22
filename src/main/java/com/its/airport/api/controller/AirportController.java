@@ -42,5 +42,9 @@ public class AirportController {
 
         return airportClient.getTotalPriceCheap(request.getItineraryType(),request.getDepartureAirportCode(),request.getDestinationAirportCode(),request.getDepartureDate(),request.getReturnDate(),request.getAdult(),request.getChildren(),request.getInfant());
     }
+    @PostMapping("orderTicket")
+    public  Object getOrderTicket(@RequestBody AirportRequest request){
+        return  airportClient.getOrderTicet(request);
+    }
 
 }

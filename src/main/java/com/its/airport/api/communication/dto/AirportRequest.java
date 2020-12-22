@@ -27,4 +27,28 @@ public class AirportRequest {
     Integer infant;
     @JsonProperty("airlineCode")
     String airlineCode;
+    @JsonProperty("cus_name")
+    String customerName;
+    @JsonProperty("phone")
+    String phone;
+    @JsonProperty("phone_order")
+    String phoneOrder;
+
+    @JsonProperty("phone_type")
+    int phone_type;
+    @JsonProperty("suitcase")
+    int suitcase;
+    @Override
+    public Object clone() {
+        AirportRequest request = new AirportRequest();
+        request.setItineraryType(itineraryType);
+        request.setDepartureAirportCode(departureAirportCode);
+        request.setDestinationAirportCode(destinationAirportCode);
+        request.setDepartureDate(departureDate);
+        request.setReturnDate(returnDate);
+        request.setAdult(adult);
+        request.setChildren(children);
+        request.setInfant(infant);
+        return request;
+    }
 }
