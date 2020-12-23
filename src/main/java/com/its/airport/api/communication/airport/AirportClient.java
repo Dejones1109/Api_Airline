@@ -11,6 +11,8 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -238,6 +240,7 @@ public class AirportClient {
     }
 
     public Object getOrderTicet(AirportRequest request){
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         Map<String,Integer> map = new HashMap<>();
         try {
             OrderTicket orderTicket1 = new OrderTicket();
@@ -245,7 +248,9 @@ public class AirportClient {
             orderTicket1.setPhone(request.getPhone());
             orderTicket1.setPhoneOrder(request.getPhoneOrder());
             orderTicket1.setPhoneType(request.getPhone_type());
+            log.info("startCity:{}",airportRepository.provinceName(request.getDepartureAirportCode()));
             orderTicket1.setStartCity(airportRepository.provinceName(request.getDepartureAirportCode()));
+            log.info("endCity:{}",airportRepository.provinceName(request.getDestinationAirportCode()));
             orderTicket1.setEndCity(airportRepository.provinceName(request.getDestinationAirportCode()));
             orderTicket1.setStartDate(request.getDepartureDate());
             orderTicket1.setEndDate(request.getReturnDate());
@@ -253,8 +258,9 @@ public class AirportClient {
             orderTicket1.setChild(request.getChildren());
             orderTicket1.setInfant(request.getInfant());
             orderTicket1.setSuitcase(request.getSuitcase());
+            orderTicket1.setCreateDate(myFormatObj.format(LocalDateTime.now()));
             orderTickerRepository.save(orderTicket1);
-            log.info("ok");
+            log.info("order ticket successful");
             map.put("result",1);
         }catch (Exception e){
             log.error("error:{}",e);

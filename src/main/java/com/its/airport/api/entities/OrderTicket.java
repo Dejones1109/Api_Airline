@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -43,4 +44,6 @@ public class OrderTicket {
     int infant;
     @Column(name = "suitcase")
     int suitcase;
+    @Column(name = "create_date")
+    String createDate;
 }

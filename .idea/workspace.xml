@@ -20,25 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4aac844f-a233-49a5-ac5d-4343e65cdea2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/its/airport/api/entities/OrderTicket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/its/airport/api/repositories/OrderTickerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/airport/api/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/airport/api/GatewayApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/its/airport/api/communication/airport/AirportClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/airport/api/communication/airport/AirportClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/airport/api/communication/airport/AirportCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/airport/api/communication/airport/AirportCommunication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/airport/api/communication/dto/AirportRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/airport/api/communication/dto/AirportRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/airport/api/controller/AirportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/airport/api/controller/AirportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/airport/api/entities/OrderTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/airport/api/entities/OrderTicket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/its/airport/api/repositories/AirportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/its/airport/api/repositories/AirportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/its/airport/api/repositories/common/CommonRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Api-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Api-0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Api-0.1.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/Api-0.1.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/its/airport/api/GatewayApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/airport/api/GatewayApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/its/airport/api/communication/airport/AirportClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/airport/api/communication/airport/AirportClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/its/airport/api/communication/airport/AirportCommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/airport/api/communication/airport/AirportCommunication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/its/airport/api/communication/dto/AirportRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/airport/api/communication/dto/AirportRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/its/airport/api/controller/AirportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/its/airport/api/controller/AirportController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +146,10 @@
       <workItem from="1607674034254" duration="1148000" />
       <workItem from="1607684044239" duration="1224000" />
       <workItem from="1608197084215" duration="2086000" />
-      <workItem from="1608345266292" duration="4687000" />
+      <workItem from="1608345266292" duration="5065000" />
+      <workItem from="1608606737691" duration="1403000" />
+      <workItem from="1608612012027" duration="1352000" />
+      <workItem from="1608623062666" duration="258000" />
     </task>
     <servers />
   </component>
@@ -220,58 +209,58 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="375" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1602240364588" />
-    <state x="739" y="274" key="FileChooserDialogImpl" timestamp="1607736967688">
+    <state x="739" y="274" key="FileChooserDialogImpl" timestamp="1608601654007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="739" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607736967688" />
-    <state width="1877" height="318" key="GridCell.Tab.0.bottom" timestamp="1608349207318">
+    <state x="739" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608601654007" />
+    <state width="1152" height="261" key="GridCell.Tab.0.bottom" timestamp="1608619739371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608349207318" />
-    <state width="1877" height="318" key="GridCell.Tab.0.center" timestamp="1608349207318">
+    <state width="1152" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608619739371" />
+    <state width="1152" height="261" key="GridCell.Tab.0.center" timestamp="1608619739370">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608349207318" />
-    <state width="1877" height="318" key="GridCell.Tab.0.left" timestamp="1608349207318">
+    <state width="1152" height="261" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608619739370" />
+    <state width="1152" height="261" key="GridCell.Tab.0.left" timestamp="1608619739370">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608349207318" />
-    <state width="1877" height="318" key="GridCell.Tab.0.right" timestamp="1608349207318">
+    <state width="1152" height="261" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608619739370" />
+    <state width="1152" height="261" key="GridCell.Tab.0.right" timestamp="1608619739370">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608349207318" />
-    <state width="1877" height="318" key="GridCell.Tab.1.bottom" timestamp="1608349207318">
+    <state width="1152" height="261" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608619739370" />
+    <state width="1152" height="261" key="GridCell.Tab.1.bottom" timestamp="1608619739371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608349207318" />
-    <state width="1877" height="318" key="GridCell.Tab.1.center" timestamp="1608349207318">
+    <state width="1152" height="261" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608619739371" />
+    <state width="1152" height="261" key="GridCell.Tab.1.center" timestamp="1608619739371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608349207318" />
-    <state width="1877" height="318" key="GridCell.Tab.1.left" timestamp="1608349207318">
+    <state width="1152" height="261" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608619739371" />
+    <state width="1152" height="261" key="GridCell.Tab.1.left" timestamp="1608619739371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608349207318" />
-    <state width="1877" height="318" key="GridCell.Tab.1.right" timestamp="1608349207318">
+    <state width="1152" height="261" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608619739371" />
+    <state width="1152" height="261" key="GridCell.Tab.1.right" timestamp="1608619739371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608349207318" />
-    <state width="1877" height="318" key="GridCell.Tab.2.bottom" timestamp="1608349207318">
+    <state width="1152" height="261" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608619739371" />
+    <state width="1877" height="318" key="GridCell.Tab.2.bottom" timestamp="1608601655114">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608349207318" />
-    <state width="1877" height="318" key="GridCell.Tab.2.center" timestamp="1608349207318">
+    <state width="1877" height="318" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608601655114" />
+    <state width="1877" height="318" key="GridCell.Tab.2.center" timestamp="1608601655114">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608349207318" />
-    <state width="1877" height="318" key="GridCell.Tab.2.left" timestamp="1608349207318">
+    <state width="1877" height="318" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608601655114" />
+    <state width="1877" height="318" key="GridCell.Tab.2.left" timestamp="1608601655114">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608349207318" />
-    <state width="1877" height="318" key="GridCell.Tab.2.right" timestamp="1608349207318">
+    <state width="1877" height="318" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608601655114" />
+    <state width="1877" height="318" key="GridCell.Tab.2.right" timestamp="1608601655114">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="318" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608349207318" />
+    <state width="1877" height="318" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608601655114" />
     <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1605769100239">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -317,12 +306,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/its/airport/api/communication/airport/AirportClient.java</url>
-          <line>41</line>
+          <line>43</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/its/airport/api/communication/airport/AirportClient.java</url>
-          <line>99</line>
+          <line>101</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
@@ -335,7 +324,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/its/airport/api/communication/airport/AirportClient.java</url>
-          <line>36</line>
+          <line>38</line>
           <properties class="com.its.airport.api.communication.airport.AirportClient" method="isCheckRoute">
             <option name="EMULATED" value="true" />
           </properties>
